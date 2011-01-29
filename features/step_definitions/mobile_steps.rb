@@ -7,11 +7,15 @@ Given /^(?:|I )am a normal user$/ do
 end
 
 Then /^(?:|I )should get a (\d+) status code$/ do |code|
-  puts page.body
+ 
   assert_equal(code.to_i,page.status_code)
 end
 
 Then /^I should get a (.+) Exception$/ do |exception_name|
 
   assert_equal(exception_name, @exception.class.name) {  }
+end
+
+When /^I GET the (.+) page$/ do |page|
+  visit page
 end

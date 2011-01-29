@@ -1,4 +1,4 @@
-require File.expand_path('../mobile_filter',  __FILE__)
+require File.expand_path('../middleware/mobile_filter',  __FILE__)
 
 require 'rails/all'
 

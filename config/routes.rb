@@ -2,6 +2,10 @@ RailsMobileApp::Application.routes.draw do
   
   # standard rails mappings
   resources :posts
+   match "sinfo", :to => "info#index"
+  match '/sphoto/:id', :to => "photo#index"
+
+   match '/sp1/:id', :to => "photo#index", :constraints => { :id => "1" }
 
 
   
@@ -16,6 +20,8 @@ RailsMobileApp::Application.routes.draw do
 
   #-------- shortcut based mappings
   match "shortcut" => "info#index$", :classifier => :mobile_classifier
+
+  get "contact/index$", :classifier => :mobile_classifier
 end
 
 MobileDispatch::Categories.add do

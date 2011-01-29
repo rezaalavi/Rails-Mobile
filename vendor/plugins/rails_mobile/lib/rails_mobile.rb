@@ -1,2 +1,5 @@
 require "rails_mobile/application"
-require "rails_mobile/action_dispatch_mobile"
+require "rails_mobile/mobile_dispatch/mobile_matcher"
+require "rails_mobile/mobile_dispatch/action_dispatch"
+require "rails_mobile/mobile_dispatch/categories"
+require "rails_mobile/mobile_dispatch/parameters"
