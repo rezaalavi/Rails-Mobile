@@ -74,21 +74,21 @@ for that group of devices.
 
 == Example
 
-RailsMobileApp::Application.routes.draw do
+    RailsMobileApp::Application.routes.draw do
 
-  match "info", :to => "info#index$", :classifier => :mobile_classifier
-  match "mobile", :to => "mobile#index", :mobile_only =>true, :classifier => :mobile_classifier
-  match '/photo/:id', :to => "photo#index$", :classifier => :mobile_classifier
-  get "contact/index$", :classifier => :mobile_classifier
+      match "info", :to => "info#index$", :classifier => :mobile_classifier
+      match "mobile", :to => "mobile#index", :mobile_only =>true, :classifier => :mobile_classifier
+      match '/photo/:id', :to => "photo#index$", :classifier => :mobile_classifier
+      get "contact/index$", :classifier => :mobile_classifier
 
-end
+    end
 
-MobileDispatch::Categories.add do
-  def mobile_classifier(device)
-    "_mobile"
-  end
+    MobileDispatch::Categories.add do
+      def mobile_classifier(device)
+        "_mobile"
+      end
 
-end
+    end
 
 == License
 
