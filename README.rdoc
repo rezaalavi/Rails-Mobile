@@ -13,9 +13,10 @@ similar groups and then calling a customized controller or action.
 
 == Installation
 
-gem install rails-mobile
+ gem install rails-mobile
 
 You also need to add rails-mobile to your Gemfile
+ gem 'rails-mobile', :require => "rails_mobile"
 
 == Added Functionality
 
