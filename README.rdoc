@@ -91,6 +91,10 @@ for that group of devices.
 
     end
 
+== Other Project
+There are couple of other rails project that I am actively involved with including:
+* A {free ASX stock screener}[http://www.stockvalue.com.au/]
+
 == License
 
  Apache License
